@@ -5,8 +5,9 @@ import {
   TouchableHighlight,
   Platform
 } from 'react-native'
+import PropTypes from 'prop-types'
 
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import utils from '../utils/utils'
 import debounce from 'debounce'
 var Camera = utils.isWeb() ? null : require('react-native-camera').default

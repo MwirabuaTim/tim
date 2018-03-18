@@ -6,9 +6,8 @@ import React, { Component } from 'react'
 import {
   // ListView,
   // StyleSheet,
-  PropTypes,
   Image,
-  Navigator,
+  ImageBackground,
   Platform,
   PixelRatio,
   View,
@@ -19,6 +18,7 @@ import {
   Modal,
   TouchableHighlight,
 } from 'react-native'
+import PropTypes from 'prop-types'
 import _ from 'lodash'
 import TimerMixin from 'react-timer-mixin'
 import Reflux from 'reflux'
@@ -31,6 +31,7 @@ import ActionSheet from 'react-native-actionsheet'
 import { makeResponsive } from 'react-native-orient'
 import debounce from 'debounce'
 
+import Navigator from './Navigator'
 import MessageView from './MessageView'
 import MessageRow from './MessageRow'
 import MyProductMessageRow from './MyProductMessageRow'
@@ -57,7 +58,6 @@ import Actions from '../Actions/Actions'
 import NetworkInfoProvider from './NetworkInfoProvider'
 import ProgressInfo from './ProgressInfo'
 import PageView from './PageView'
-import BackgroundImage from './BackgroundImage'
 import { makeStylish } from './makeStylish'
 import ActivityIndicator from './ActivityIndicator'
 import platformStyles, {MenuIcon} from '../styles/platform'
@@ -924,7 +924,7 @@ class MessageList extends Component {
 
     return (
       <PageView style={[platformStyles.container, bgStyle]} separator={separator}>
-        <Image source={{uri: bgImage}}  resizeMode='cover' style={image}>
+        <ImageBackground source={{uri: bgImage}}  resizeMode='cover' style={image}>
           {network}
           <ProgressInfo recipient={progressInfoR[ROOT_HASH]} />
           <ChatContext chat={resource} context={context} contextChooser={this.contextChooser} shareWith={this.shareWith} bankStyle={bankStyle} allContexts={allContexts} />
@@ -932,7 +932,7 @@ class MessageList extends Component {
           {content}
           {actionSheet}
           {alert}
-        </Image>
+        </ImageBackground>
       </PageView>
     );
   }

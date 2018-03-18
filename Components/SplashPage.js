@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import WebView from './WebView'
+import PropTypes from 'prop-types'
 import utils from '../utils/utils'
 import TourPage from './TourPage'
 

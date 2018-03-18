@@ -12,10 +12,10 @@ import {
   Image,
   Alert,
   // StyleSheet,
-  Navigator,
   Switch,
   DatePickerAndroid,
-} from 'react-native';
+} from 'react-native'
+import PropTypes from 'prop-types';
 
 import SwitchSelector from 'react-native-switch-selector'
 import format from 'string-template'
@@ -30,6 +30,7 @@ import moment from 'moment'
 import constants from '@tradle/constants'
 import plugins from '@tradle/biz-plugins'
 
+import Navigator from './Navigator'
 import ResourceList from './ResourceList'
 import GridList from './GridList'
 import utils, {
