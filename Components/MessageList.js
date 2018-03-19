@@ -19,6 +19,7 @@ import {
   TouchableHighlight,
 } from 'react-native'
 import PropTypes from 'prop-types'
+
 import _ from 'lodash'
 import TimerMixin from 'react-timer-mixin'
 import Reflux from 'reflux'

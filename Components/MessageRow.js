@@ -17,6 +17,7 @@ import {
 } from 'react-native'
 import WebView from './WebView'
 import PropTypes from 'prop-types'
+
 import React, { Component } from 'react'
 import utils, {
   translate
